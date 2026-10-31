@@ -1,5 +1,5 @@
 """Manuscript definitions collected from build_fig6j_adjacent_interday.py.
-See provenance/source_files.csv for original hashes and definition ranges.
+See provenance/source_files.csv for original source-file hashes.
 """
 
 from __future__ import annotations
@@ -18,10 +18,26 @@ from maze_analysis.manuscript_heatmap_style import (  # noqa: E402
     heatmap_panel_spec,
 )
 
-from scripts.build_manuscript_fig6_figs3_stability import (  # noqa: E402
-    MPL_STYLE,
-    plot_pv_heatmap,
-)
+from figure_helpers.figure6 import plot_pv_heatmap
+
+MPL_STYLE = {
+    "font.family": "sans-serif",
+    "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+    "font.size": 8,
+    "axes.titlesize": 8,
+    "axes.labelsize": 8,
+    "legend.fontsize": 8,
+    "xtick.labelsize": 8,
+    "ytick.labelsize": 8,
+    "axes.linewidth": 0.5,
+    "xtick.major.width": 0.5,
+    "ytick.major.width": 0.5,
+    "xtick.major.size": 2,
+    "ytick.major.size": 2,
+    "svg.fonttype": "none",
+    "pdf.fonttype": 42,
+    "ps.fonttype": 42,
+}
 
 ADJACENT_PAIRS = (
     (1, 1, 2, "D1-D2"),

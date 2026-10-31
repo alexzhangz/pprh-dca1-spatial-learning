@@ -1,5 +1,5 @@
 """Manuscript definitions collected from build_manuscript_fig6_figs3_stability.py.
-See provenance/source_files.csv for original hashes and definition ranges.
+See provenance/source_files.csv for original source-file hashes.
 """
 
 from __future__ import annotations

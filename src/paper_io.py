@@ -63,4 +63,5 @@ def p_symbol(p):
 
 
 def write_run_record(path, *, figure, refit, exports):
-    Path(path).write_text(json.dumps({"manuscript": "Xu et_al_manuscript_20261030.docx", "figure": figure, "statistics": "refitted from input tables" if refit else "frozen manuscript estimates", "exports": exports}, indent=2), encoding="utf-8")
+    record = {"figure": figure, "statistics": "refitted from input tables" if refit else "frozen manuscript estimates", "exports": exports}
+    Path(path).write_text(json.dumps(record, indent=2), encoding="utf-8")

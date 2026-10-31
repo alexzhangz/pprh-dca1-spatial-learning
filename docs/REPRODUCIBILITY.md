@@ -8,18 +8,18 @@
 
 ## Completed manuscript checks
 
-The collection was validated with Python 3.12 using the package versions in `provenance/tested_environment.json`.
+The code was validated with Python 3.12 using the pinned package versions in `requirements.txt` and `environment.yml`.
 
-- All 52 collected original source modules imported from an extracted standalone archive.
-- All 304 source-data files matched their SHA-256 inventory.
+- All retained analysis modules import from the standalone repository. `provenance/source_files.csv` identifies their original sources and current file hashes.
+- All 99 source-data files in the current inventory matched their SHA-256 values. The inventory contains 95 files read by the figure notebooks and four frozen statistical reference tables.
 - The 13 retained Bayesian decoder and posterior tests passed.
 - All eight expanded notebooks passed structure and syntax checks and were executed cell by cell in isolated Python 3.12 kernels. All seven figure notebooks ran with statistical refitting enabled; expensive raw-data switches in notebook 00 remained disabled.
 - The figure workflows produced 60 PNG exports. Sampled stability, separation and Bayesian-error panels were inspected visually.
 - Statistical refits matched 882 contrast records across 11 analysis families, comparing effects/coefficient estimates, standard errors and P values with relative tolerance `1e-6` and absolute tolerance `1e-8`. The largest absolute P-value difference was approximately `2.71e-8`.
 
-Numerical details and the validation boundary are in `provenance/validation_summary.json`. This does not establish pixel equality with the manually assembled manuscript figures. Full raw neural computations have not been rerun for this collection, and a fresh installation on a second computer has not been verified locally.
+These checks do not establish pixel equality with the manually assembled manuscript figures. Full-cohort raw neural computations have not been rerun. GitHub Actions separately installs the pinned environment and runs the repository checks, 13 scientific tests and synthetic decoder example on fresh Ubuntu and Windows runners.
 
-The notebook execution record is in `provenance/notebook_execution.json`. The expanded cells produced 60 PNG exports and refitted the same 882 contrast records. Notebook 00 contains explicit per-subject computation functions and calls for manifold, stability, PV shuffles and a one-session decoder; execution with raw-data switches disabled checks definitions/imports rather than the expensive raw computations. Its decoder function was separately exercised with 10 synthetic trials, 50 neurons, five trial folds and 100 within-trial shifts. That synthetic check is not a full-cohort manuscript rerun.
+The expanded notebook cells produced 60 PNG exports and refitted the same 882 contrast records. Notebook 00 contains explicit per-subject computation functions and calls for manifold, stability, PV shuffles and a one-session decoder; execution with raw-data switches disabled checks definitions/imports rather than the expensive raw computations. Its decoder function was separately exercised with 10 synthetic trials, 50 neurons, five trial folds and 100 within-trial shifts. That synthetic check is not a full-cohort manuscript rerun.
 
 ## Repository checks
 
@@ -29,4 +29,6 @@ The workflow follows the [official GitHub Python workflow documentation](https:/
 
 ## Provenance and adapted paths
 
-Original source-file and definition hashes remain in `provenance/source_files.csv` and `provenance/source_definitions.csv`. Historical filenames and analysis-version identifiers are retained. `provenance/release_adjustments.json` records changes needed to collect the code and make paths portable. Hashes inside historical contracts refer to their historical source records; `provenance/release_files.sha256` identifies the actual files in this upload snapshot. No manuscript DOI, publication status or repository URL has been invented.
+Original source-file hashes and current module hashes are recorded in `provenance/source_files.csv`; frozen input hashes are in `data/required_files.csv`. Historical source filenames remain traceable through `figure_panel_map.csv`. The manuscript cohort and numerical settings remain in the cohort JSON, metric-parameter CSV and executable notebook cells.
+
+Odd/even maps display D1/D3/D5 while longitudinal analyses retain D1–D5. The adjacent-day 6j heatmap uses its accepted adjacent-day source table and the shared Fig.6 plotting implementation.

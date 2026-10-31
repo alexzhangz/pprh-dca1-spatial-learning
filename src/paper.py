@@ -1,4 +1,4 @@
-"""Figure-ordered workflows for the 30 October 2026 manuscript.
+"""Figure-ordered workflows for the accompanying manuscript.
 
 Shared scientific functions retain their original implementations. This module
 replaces historic release-directory and Word-document dependencies with explicit

@@ -1,5 +1,5 @@
 """Manuscript definitions collected from build_fig7_pprh_manifold_heatmap_completion.py.
-See provenance/source_files.csv for original hashes and definition ranges.
+See provenance/source_files.csv for original source-file hashes.
 """
 
 from __future__ import annotations

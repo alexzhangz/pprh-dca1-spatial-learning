@@ -4,7 +4,7 @@ This repository contains code, parameters and file manifests. Neural, behavioral
 
 Place the matching source-data directory at `data/input/`, supply `--data-root`, or set `PPRH_DATA_DIR` for the notebooks. Check file identity with `python main.py --check-data --data-root /path/to/manuscript-source-data`. The MIT code licence does not determine the licence of the separate data.
 
-`required_files.csv` lists the frozen files used during local validation, their relative paths, sizes and SHA-256 values. The top-level directory contains:
+`required_files.csv` lists the 99 frozen inputs needed by the figure workflows and estimate checks, with relative paths, sizes and SHA-256 values. This list was checked against actual file reads during execution of all figure notebooks: 95 directly accessed files plus four frozen statistical reference tables. Unused output tables and alternative heatmap arrays from historical release folders are omitted. Raw aligned inputs for notebook 00 are additional data, described below rather than included in this source-table inventory. The top-level directory contains:
 
 ```text
 fig3/                       Behavior mouse-day/trial tables and frozen LMMs

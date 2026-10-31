@@ -1,5 +1,5 @@
 """Manuscript definitions collected from tmaze_legacy_pooled.py.
-See provenance/source_files.csv for original hashes and definition ranges.
+See provenance/source_files.csv for original source-file hashes.
 """
 
 from __future__ import annotations
