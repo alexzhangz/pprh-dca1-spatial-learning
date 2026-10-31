@@ -1,0 +1,37 @@
+{
+  "version": "manuscript_requested_cohort_v3_drop_A9_A11_C5_C6_20260804",
+  "status": "current",
+  "days": [1, 2, 3, 4, 5],
+  "figure_8_maze": {
+    "control": ["A4", "A5", "A7", "A8", "A10"],
+    "inhibition": ["B1", "B2", "B5", "B6", "B7", "B10", "B11"],
+    "pprh_recording": ["H1", "H2", "H3", "H5", "H6"],
+    "whole_mouse_exclusions": {
+      "A9": "author-directed manuscript-wide exclusion selected after inspection of statistical outcomes",
+      "A11": "author-directed manuscript-wide exclusion selected after inspection of statistical outcomes"
+    }
+  },
+  "t_maze": {
+    "control": ["C3", "C4", "C7", "C8", "C9", "C10", "C11"],
+    "inhibition": ["I2", "I3", "I4", "I5", "I7", "I8", "I9"],
+    "pprh_recording": ["P1", "P2", "P3", "P4", "P5"],
+    "whole_mouse_exclusions": {
+      "C5": "author-directed manuscript-wide exclusion selected after inspection of statistical outcomes",
+      "C6": "author-directed manuscript-wide exclusion selected after inspection of statistical outcomes",
+      "I1": "pre-existing author-directed task-wide exclusion; independent pre-result QC rationale unresolved",
+      "I6": "no aligned imaging dataset; excluded from the common cross-figure cohort"
+    }
+  },
+  "rules": {
+    "whole_mouse_exclusions_are_task_wide": true,
+    "mouse_day_threshold_failures_change_nominal_cohort": false,
+    "I1_complete_cohort_sensitivity_required": true,
+    "compact_count_aliases_forbidden": true,
+    "posthoc_outcome_selected_exclusions_present": true,
+    "preserve_prior_cohort_releases": true,
+    "single_neuron_primary_requested_random_effect": "globally_unique_neuron_only",
+    "single_neuron_mouse_random_effect_omitted": true,
+    "single_neuron_mouse_time_random_effect_omitted": true,
+    "population_outcomes_use_mouse_random_intercept": true
+  }
+}

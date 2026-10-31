@@ -1,0 +1,70 @@
+{
+  "version": "tmaze_pprh_recording_legacy_pooled_lateral_only_v1_20260805",
+  "status": "current",
+  "scope": ["Fig7F", "Fig7G", "Fig7H", "Fig7I", "FigS4E", "FigS4F"],
+  "cohort_contract": {
+    "path": "notebook-8-maze/config/manuscript_cohort_v3_20260804.json",
+    "sha256": "9fa59605e5be5c7bee5f5586c590719e2a01be861303faeb660086020a699115"
+  },
+  "cohorts": {
+    "dca1_control": ["C3", "C4", "C7", "C8", "C9", "C10", "C11"],
+    "pprh_recording": ["P1", "P2", "P3", "P4", "P5"]
+  },
+  "days": [1, 2, 3, 4, 5],
+  "high_dimensional_pv": {
+    "cache_name": "tmaze_pv_shuffle_50all_zscore.npy",
+    "metric": "spearman_separation_z",
+    "population_space": "original_high_dimensional_population_space_after_fixed_50_subsampling",
+    "target_neuron_count": 50,
+    "n_repeat": 100,
+    "n_shuffle": 100,
+    "minimum_trials_per_condition": 3,
+    "shuffle_formula": "(mean_shuffle-observed_spearman)/sd_shuffle"
+  },
+  "neural_manifold": {
+    "metric": "shuffle_z",
+    "embedding": "SpectralEmbedding",
+    "embedding_dim": 15,
+    "target_neuron_count": 50,
+    "n_repeat": 100,
+    "n_shuffle": 100,
+    "minimum_trials_per_condition": 3,
+    "dprime_covariance": "legacy_pooled",
+    "shuffle_formula": "(observed_dprime-mean_shuffle)/sd_shuffle",
+    "control_section_source": {
+      "path": "source-projects/T-maze/notebook-8maze-migration/04_neural_manifold/analysis_outputs/manifold_quantification_d1_d5_exclude_I1/tables/manifold_spatial_section_mouse_day_table_d1_d5_exclude_I1.csv",
+      "sha256": "f7a1c1b81d91ef6eb580f47e08200a2faf32c43083ba8b4784876e6a4e7dc574"
+    },
+    "pprh_section_source": {
+      "status": "required_external_input",
+      "required_groups": ["P"],
+      "required_mice": ["P1", "P2", "P3", "P4", "P5"]
+    }
+  },
+  "contrasts": {
+    "Fig7F-G-I": "sample_vs_choice",
+    "FigS4E": "sample_left_vs_right",
+    "FigS4F": "choice_left_vs_right"
+  },
+  "spatial_sections": {
+    "stem": [0, 12],
+    "choice_arm": [13, 28]
+  },
+  "statistics": {
+    "sampling_unit": "mouse_day",
+    "biological_replicate": "mouse",
+    "model": "value ~ (day - 3) * group + route_relative_lateral_deviation_z + (1 | mouse)",
+    "reference_group": "C",
+    "comparison_group": "P",
+    "manuscript_probability": "raw two-sided P",
+    "multiple_comparison_correction": "none"
+  },
+  "covariates": {
+    "source": "choice-run aligned behavior",
+    "adjustment_variables": ["route_relative_lateral_deviation_cm"],
+    "audit_only_variables": ["mean_speed_cm_s"],
+    "standardization": "pooled z-score across the locked C7/P5 mouse-day cohort",
+    "ddof": 1
+  },
+  "provenance_note": "The legacy_pooled manifold source remains unchanged. This contract supersedes speed-plus-lateral adjustment only for direct dCA1-control versus pPRH-recording comparisons; mean speed is audit-only."
+}

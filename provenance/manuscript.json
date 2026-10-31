@@ -1,0 +1,24 @@
+{
+  "filename": "Xu et_al_manuscript_20261030.docx",
+  "sha256": "5b44812a8b65bb7218113ed50c6f519d2fb51cd1bee29db6683c597267ded51c",
+  "scope": [
+    "Fig3d,e,h",
+    "Fig4 quantitative and manifold examples",
+    "Fig5",
+    "Fig6",
+    "Fig7",
+    "FigS4",
+    "FigS5",
+    "FigS6",
+    "FigS7",
+    "FigS8"
+  ],
+  "excluded": [
+    "histology",
+    "manipulation validation",
+    "independent behavioral experiments",
+    "Fig3i",
+    "FigS1-S3",
+    "FigS9-S10"
+  ]
+}

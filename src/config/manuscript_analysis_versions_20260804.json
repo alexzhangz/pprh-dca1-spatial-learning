@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.1",
+  "version": "manuscript_analysis_versions_legacy_pooled_tmaze_ci_pprh_20260804",
+  "status": "current",
+  "cohort_contract": {
+    "path": "notebook-8-maze/config/manuscript_cohort_v3_20260804.json",
+    "sha256": "9fa59605e5be5c7bee5f5586c590719e2a01be861303faeb660086020a699115"
+  },
+  "t_maze_neural_manifold": {
+    "manuscript_role": "primary",
+    "days": [1, 2, 3, 4, 5],
+    "control": ["C3", "C4", "C7", "C8", "C9", "C10", "C11"],
+    "inhibition": ["I2", "I3", "I4", "I5", "I7", "I8", "I9"],
+    "excluded_mice": ["C5", "C6", "I1", "I6"],
+    "embedding": "SpectralEmbedding",
+    "embedding_dim": 15,
+    "target_neuron_count": 50,
+    "n_repeat": 100,
+    "n_shuffle": 100,
+    "dprime_covariance": "legacy_pooled",
+    "shuffle_standardization": "(observed_dprime - mean_shuffle) / sd_shuffle",
+    "source_profile": "historical_d1_d5_exclude_I1_pooled_snapshot",
+    "spatial_bin_source": {
+      "path": "source-projects/T-maze/notebook-8maze-migration/04_neural_manifold/analysis_outputs/manifold_quantification_d1_d5_exclude_I1/tables/manifold_spatial_bin_mouse_day_table_d1_d5_exclude_I1.csv",
+      "sha256": "e6e293c47ed43a14ec562cace1cd67e7b98e3806a6e572678c6392bf90727771"
+    },
+    "spatial_section_source": {
+      "path": "source-projects/T-maze/notebook-8maze-migration/04_neural_manifold/analysis_outputs/manifold_quantification_d1_d5_exclude_I1/tables/manifold_spatial_section_mouse_day_table_d1_d5_exclude_I1.csv",
+      "sha256": "f7a1c1b81d91ef6eb580f47e08200a2faf32c43083ba8b4784876e6a4e7dc574"
+    },
+    "provenance_note": "The snapshot was generated before the implementation switched to within-class Ledoit-Wolf covariance. It is therefore explicitly identified as legacy_pooled throughout the manuscript release."
+  },
+  "t_maze_pprh_recording_neural_manifold": {
+    "manuscript_role": "primary",
+    "panel_scope": ["Fig7F", "Fig7G", "Fig7I", "FigS4E", "FigS4F"],
+    "days": [1, 2, 3, 4, 5],
+    "dca1_control": ["C3", "C4", "C7", "C8", "C9", "C10", "C11"],
+    "pprh_recording": ["P1", "P2", "P3", "P4", "P5"],
+    "task_wide_excluded_mice": ["C5", "C6", "I1", "I6"],
+    "embedding": "SpectralEmbedding",
+    "embedding_dim": 15,
+    "target_neuron_count": 50,
+    "n_repeat": 100,
+    "n_shuffle": 100,
+    "minimum_trials_per_condition": 3,
+    "dprime_covariance": "legacy_pooled",
+    "shuffle_standardization": "(observed_dprime - mean_shuffle) / sd_shuffle",
+    "day_centering": "day - 3",
+    "historical_subject_seeds": {
+      "P1": 17002077,
+      "P2": 18002080,
+      "P3": 19002083,
+      "P4": 20002086,
+      "P5": 21002089
+    },
+    "control_spatial_bin_source": {
+      "path": "source-projects/T-maze/notebook-8maze-migration/04_neural_manifold/analysis_outputs/manifold_quantification_d1_d5_exclude_I1/tables/manifold_spatial_bin_mouse_day_table_d1_d5_exclude_I1.csv",
+      "sha256": "e6e293c47ed43a14ec562cace1cd67e7b98e3806a6e572678c6392bf90727771"
+    },
+    "control_spatial_section_source": {
+      "path": "source-projects/T-maze/notebook-8maze-migration/04_neural_manifold/analysis_outputs/manifold_quantification_d1_d5_exclude_I1/tables/manifold_spatial_section_mouse_day_table_d1_d5_exclude_I1.csv",
+      "sha256": "f7a1c1b81d91ef6eb580f47e08200a2faf32c43083ba8b4784876e6a4e7dc574"
+    },
+    "pprh_release": {
+      "root": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804",
+      "run_manifest": {
+        "path": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804/run_manifest.json",
+        "sha256": "867c7083a2068481d9555b4d7b094bbdf738f34126e221978a0c1c4bcc457814"
+      },
+      "spatial_bin_source": {
+        "path": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804/tables/tmaze_p_manifold_spatial_bin_mouse_day_D1_D5_legacy_pooled.csv",
+        "sha256": "3a0881d42008d84877156000901371145ca5e08d854a930266eb6db2ea5812a0"
+      },
+      "spatial_section_source": {
+        "path": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804/tables/tmaze_p_manifold_spatial_section_mouse_day_D1_D5_legacy_pooled.csv",
+        "sha256": "a01c95b46be8d52b177f30409a069d1bd5ce0e2d7b3a1d2329fb28eafed1cf72"
+      },
+      "support_qc": {
+        "path": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804/qc/mouse_day_contrast_support.csv",
+        "sha256": "4ce4d3c8e2e6bdccef57091fe3bb30516e2d5d2d41cb38aa204f2c7f22884ba1"
+      },
+      "subject_qc": {
+        "path": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804/qc/subject_run_qc.csv",
+        "sha256": "0b91239ca95fa20757c04d4c91deb35ed3fc97394707913c02fe914d81a6ba13"
+      },
+      "parity_qc": {
+        "path": "notebook-8-maze/analysis_outputs/tmaze_pprh_manifold_d1_d5_legacy_pooled_20260804/qc/C3_D1_D5_parity_summary.csv",
+        "sha256": "8c23d7ed34f1ca5de6ef67b6359b38d9ac81e552ab18cacab519d2b0ca3fe8f6"
+      },
+      "cache_sha256": {
+        "P1": "c3bdee91611e16d8976954d999d24ff59884224bc368285ed27798a87f95bf18",
+        "P2": "b2d34f732657b70bb3b14f05ac158b3c9fa577d69f219b7288e00bf22f4d50b0",
+        "P3": "b9c7a63d238ed03e2ca370c6f6df4796d7b82f611e35a0059c323f4d020df118",
+        "P4": "7ffe10f8d44cb92d9f48211b86bd754c7d40aaaaa53053b06539ef7f0635493e",
+        "P5": "9ca1e8860afafaee10857141a72a601daf67f47d04b0a8fb7aa07239cb2f7602"
+      }
+    },
+    "downstream_manuscript_release": {
+      "status": "current",
+      "panel_scope": ["Fig7F", "Fig7G", "Fig7H", "Fig7I", "FigS4E", "FigS4F"],
+      "root": "notebook-8-maze/analysis_outputs/manuscript_d1_d5_cohort_v3_drop_A9_A11_C5_C6_20260804/fig7_pprh_state_separation_legacy_pooled_20260804/tmaze_F-I_S4E-F_v6",
+      "analysis_interface_contract": {
+        "path": "notebook-8-maze/config/tmaze_pprh_recording_legacy_pooled_contract_20260804.json",
+        "sha256": "613c1abaa3d92d8e5a3e675a9666b6a73ba5418713dd6e15f9fd3e9bbf045ce1"
+      },
+      "run_manifest": {
+        "path": "notebook-8-maze/analysis_outputs/manuscript_d1_d5_cohort_v3_drop_A9_A11_C5_C6_20260804/fig7_pprh_state_separation_legacy_pooled_20260804/tmaze_F-I_S4E-F_v6/manifests/run_manifest.json",
+        "sha256": "eaf28b005b9f71c7702c545056b69834c161bbd8ca98ccf60cc31afa03f0f1c1"
+      },
+      "primary_adjusted_statistics": {
+        "path": "notebook-8-maze/analysis_outputs/manuscript_d1_d5_cohort_v3_drop_A9_A11_C5_C6_20260804/fig7_pprh_state_separation_legacy_pooled_20260804/tmaze_F-I_S4E-F_v6/statistics/Fig7_S4_LMM_primary_adjusted_contrasts.csv",
+        "sha256": "fef5a30ce310cbb83253ab19a0e1d8ae50a3beb7ac2cf449de8414da7890f451"
+      },
+      "release_validation": {
+        "path": "notebook-8-maze/analysis_outputs/manuscript_d1_d5_cohort_v3_drop_A9_A11_C5_C6_20260804/fig7_pprh_state_separation_legacy_pooled_20260804/tmaze_F-I_S4E-F_v6/statistics/Fig7_S4_release_validation.csv",
+        "sha256": "5532a47bc54863f6d1f830c3964c3bad81a15c107da0222ed94a7f6e4321f0dc"
+      },
+      "clean_reproduction": {
+        "root": "notebook-8-maze/analysis_outputs/manuscript_d1_d5_cohort_v3_drop_A9_A11_C5_C6_20260804/fig7_pprh_state_separation_legacy_pooled_20260804/tmaze_F-I_S4E-F_v6_repro",
+        "payload_match": "41/41 registered payloads matched by relative path and SHA256"
+      },
+      "supersedes": [
+        "tmaze_F-I_S4E-F_v1",
+        "tmaze_F-I_S4E-F_v2",
+        "tmaze_F-I_S4E-F_v3",
+        "tmaze_F-I_S4E-F_v4",
+        "tmaze_F-I_S4E-F_v5"
+      ]
+    },
+    "c3_historical_parity_gate": {
+      "status": "PASS",
+      "support_match": true,
+      "reference_rows": 725,
+      "computed_rows": 725,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "dprime_mean_max_abs_error": 6.661338147750939e-16,
+      "shuffle_z_max_abs_error": 4.440892098500626e-16
+    },
+    "support_contract": {
+      "expected_mouse_day_contrast_cells": 125,
+      "complete_cells": 113,
+      "expected_missing_insufficient_trial_cells": 12,
+      "expected_missing_primary_contrast_cells": 9,
+      "unexpected_support_cells": 0,
+      "legal_missing_cells": [
+        {"mouse": "P1", "day": 1, "contrast": "sample_vs_choice_right"},
+        {"mouse": "P1", "day": 1, "contrast": "sample_left_vs_right"},
+        {"mouse": "P1", "day": 1, "contrast": "choice_left_vs_right"},
+        {"mouse": "P1", "day": 1, "contrast": "sample_vs_choice"},
+        {"mouse": "P2", "day": 1, "contrast": "sample_vs_choice_right"},
+        {"mouse": "P2", "day": 1, "contrast": "sample_left_vs_right"},
+        {"mouse": "P2", "day": 1, "contrast": "choice_left_vs_right"},
+        {"mouse": "P2", "day": 1, "contrast": "sample_vs_choice"},
+        {"mouse": "P2", "day": 2, "contrast": "sample_vs_choice_left"},
+        {"mouse": "P2", "day": 2, "contrast": "sample_left_vs_right"},
+        {"mouse": "P2", "day": 2, "contrast": "choice_left_vs_right"},
+        {"mouse": "P2", "day": 2, "contrast": "sample_vs_choice"}
+      ],
+      "missingness_rule": "expected only when a contributing route-condition cell or balanced route count has fewer than three trials; no unexpected partial-bin support is permitted"
+    },
+    "graph_connectivity_warning": {
+      "status": "DOCUMENTED_WARNING",
+      "warning_type": "SpectralEmbedding graph not fully connected",
+      "exact_warning_count": null,
+      "observation": "The first P1-P5 runner emitted this warning for some embeddings but did not capture its exact count or subject-day-repeat locations.",
+      "interpretation": "All released values are finite where trial support is valid and the same implementation passes C3 historical parity; the uncaptured warning count remains a reproducibility caveat, not a hidden PASS."
+    },
+    "provenance_note": "P1-P5 were recomputed independently with the historical pooled-covariance d-prime after a fail-closed C3 numerical parity gate. The first runner completed all caches and tables but exited on an over-strict full-grid assertion; finalization reused those immutable caches and explicitly classified only the predeclared low-trial missing cells."
+  },
+  "sensitivity_only": {
+    "t_maze_within_class_ledoit_wolf": {
+      "manuscript_role": "not used in primary text or figures",
+      "status": "retained as a method-version sensitivity audit"
+    },
+    "t_maze_pprh_within_class_ledoit_wolf": {
+      "manuscript_role": "not used in primary text or figures",
+      "status": "retained only as a method-version sensitivity audit; rejected as the primary pPRH-recording manifold source"
+    }
+  }
+}

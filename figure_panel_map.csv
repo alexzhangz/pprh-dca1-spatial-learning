@@ -1,0 +1,16 @@
+current_panel,analysis,notebook,source_module,historical_source
+Fig3d;Fig3h,Daily success-rate LMMs,demos/figure_3.ipynb,figure_helpers.figure3;maze_analysis.manuscript_lmm,Fig3D/H
+Fig3e,Trial-level binomial GEE and moving-success visualization,demos/figure_3.ipynb,figure_helpers.figure3_trial_gee;figure_helpers.figure3,Final Fig3E GEE 20260811
+Fig4d,Correct-route representative manifold points and trajectories,demos/figure_4.ipynb,maze_analysis.manifold_trajectory,A4 Day7 frozen representative embedding
+Fig4f;Fig4g;Fig4h,Figure-8 route-state manifold and PV separation,demos/figure_4.ipynb,figure_helpers.figure5;figure_helpers.figure5_heatmaps,Earlier Fig5 plus manifold heatmap completion
+Fig4j,T-maze sample-choice representative manifold,demos/figure_4.ipynb,figure_helpers.tmaze_trajectory,C8 Day5 phase visualization 20260901
+Fig4l;Fig4m;Fig4n,T-maze sample-choice manifold and PV separation,demos/figure_4.ipynb,figure_helpers.figure5,Earlier Fig5L/O/R
+FigS5a-f,T-maze sample and choice route-state separation C/I,demos/figure_4.ipynb,figure_helpers.figure5;figure_helpers.figure5_heatmaps,Earlier Fig5J/K/M/N/P/Q
+Fig5b-e;Fig5g-l,dCA1 odd-even and interday stability C/I,demos/figure_5.ipynb,figure_helpers.figure4,Earlier Fig4D-M
+Fig6d-g;Fig6i-n,pPRH odd-even and interday stability C/P,demos/figure_6.ipynb,figure_helpers.figure6;figure_helpers.figure6_adjacent,Earlier Fig6 with adjacent-day Fig6J replacement
+FigS6c-f,T-maze interday stability C/I,demos/figure_6.ipynb,figure_helpers.figure6,Earlier FigS3B-E
+Fig7b-e,Figure-8 pPRH route-state PV and manifold separation,demos/figure_7.ipynb,maze_analysis.fig7_figure8_pprh;figure_helpers.manifold_heatmaps,Earlier Fig7A/B/E plus manifold heatmap completion
+Fig7g-j,T-maze pPRH sample-choice PV and manifold separation,demos/figure_7.ipynb,maze_analysis.fig7_s4_tmaze_pprh;figure_helpers.manifold_heatmaps,Earlier Fig7F/G/I plus manifold heatmap completion
+FigS8b-d;FigS8f-h,T-maze pPRH within-phase route-state separation,demos/figure_7.ipynb,maze_analysis.figs4_ad_tmaze_pv;maze_analysis.fig7_s4_tmaze_pprh,Earlier FigS4A-F
+FigS4b-c,98-bin Gaussian Bayesian decoding C/I,demos/figure_S4.ipynb,maze_analysis.bayesian_position;maze_analysis.bayesian_position_batch;maze_analysis.position_decoding_summary,September2026 Bayesian C/I release
+FigS7b-c,98-bin Gaussian Bayesian decoding C/P,demos/figure_S7.ipynb,maze_analysis.bayesian_position;maze_analysis.bayesian_position_batch;maze_analysis.position_decoding_summary,September2026 Bayesian C/P release

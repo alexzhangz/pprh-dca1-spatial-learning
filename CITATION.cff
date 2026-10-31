@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "Please cite this software and the accompanying manuscript when using these analyses."
+type: software
+title: "Analysis code: Direct posterior perirhinal input guides dorsal CA1 task-state representations during learning"
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Xu
+    given-names: Haoyu
+  - family-names: Zhang
+    given-names: Zhongjie
+  - family-names: Chung
+    given-names: Yik Lok
+  - family-names: Li
+    given-names: Jiyang
+  - family-names: Xiao
+    given-names: Xingru
+  - family-names: Chen
+    given-names: Shishuo
+  - family-names: Sun
+    given-names: Yanjun
+  - family-names: Wang
+    given-names: Cheng
+  - family-names: Cheung
+    given-names: Vincent Chi Kwan
+  - family-names: Xu
+    given-names: Chun
+  - family-names: Ip
+    given-names: Jacque Pak Kan
+preferred-citation:
+  type: unpublished
+  title: "Direct posterior perirhinal input guides dorsal CA1 task-state representations during learning"
+  year: 2026
+  notes: "Manuscript version dated 30 October 2026; publication details have not been assigned."
+  authors:
+    - family-names: Xu
+      given-names: Haoyu
+    - family-names: Zhang
+      given-names: Zhongjie
+    - family-names: Chung
+      given-names: Yik Lok
+    - family-names: Li
+      given-names: Jiyang
+    - family-names: Xiao
+      given-names: Xingru
+    - family-names: Chen
+      given-names: Shishuo
+    - family-names: Sun
+      given-names: Yanjun
+    - family-names: Wang
+      given-names: Cheng
+    - family-names: Cheung
+      given-names: Vincent Chi Kwan
+    - family-names: Xu
+      given-names: Chun
+    - family-names: Ip
+      given-names: Jacque Pak Kan
