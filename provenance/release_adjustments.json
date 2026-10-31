@@ -30,6 +30,13 @@
         "scripts/"
       ],
       "change": "Provide current-figure orchestration, explicit inputs, exports, checks and a labelled synthetic decoder example."
+    },
+    {
+      "files": [
+        "demos/",
+        "scripts/check_repository.py"
+      ],
+      "change": "Expand notebook-local functions, source loading, model fits, data inspection and panel plotting. Shared estimators are unchanged. Reject opaque run_figure delegation in notebook checks and inspect decoded notebook text for portable paths."
     }
   ],
   "hashes": "Original-file and definition hashes identify the historical sources. release_file_sha256 and release_files.sha256 identify the adapted publication files. Historical contract hashes remain source-record identifiers."

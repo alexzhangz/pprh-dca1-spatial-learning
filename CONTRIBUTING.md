@@ -13,3 +13,5 @@ python scripts/run_demo.py --output-root outputs/demo
 Changes to scientific calculations should identify their effect on manuscript results. Preserve mouse, day, phase, route and trial dimensions and the frozen cohort and analysis contracts. Changing a cohort, covariance estimator, day contrast or stochastic seed is an analysis change, even if the API is unchanged. Use a new output directory for revised results.
 
 The hashes in `provenance/source_definitions.csv` identify original source segments. `provenance/source_files.csv` records the collected release modules. The initial upload snapshot is described by `provenance/release_files.sha256`; update that snapshot deliberately when preparing a new release. Statistical refits require the separate manuscript inputs; the synthetic example checks execution only.
+
+The figure notebooks show the workflow as explicit steps, while `src/paper.py` provides the CLI orchestration. Keep their input selection, model calls and panel parameters synchronized when either workflow changes. Shared numerical methods belong in `src/`; avoid divergent copies of the underlying estimators in individual notebooks.

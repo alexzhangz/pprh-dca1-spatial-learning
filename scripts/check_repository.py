@@ -37,6 +37,10 @@ def main():
     for path in paths:
         if path.suffix in SOURCE_SUFFIXES:
             content = path.read_text(encoding="utf-8")
+            if path.suffix == ".ipynb":
+                # Check decoded cell text. JSON-escaped code newlines can
+                # otherwise resemble a Windows drive prefix.
+                content = "\n".join(cell.source for cell in nbformat.read(path, as_version=4).cells)
             if re.search(r"(?<![A-Za-z])[A-Za-z]:[/\\]", content):
                 raise RuntimeError(f"Machine-specific drive path in {path.relative_to(ROOT)}")
             if path.suffix == ".py":
@@ -47,11 +51,18 @@ def main():
     for path in notebooks:
         notebook = nbformat.read(path, as_version=4)
         nbformat.validate(notebook)
+        defined_functions = 0
         for cell in notebook.cells:
             if cell.cell_type == "code":
                 if cell.outputs or cell.execution_count is not None:
                     raise RuntimeError(f"Notebook contains saved outputs: {path.name}")
-                ast.parse(cell.source, filename=path.name)
+                tree = ast.parse(cell.source, filename=path.name)
+                defined_functions += sum(isinstance(n, ast.FunctionDef) for n in ast.walk(tree))
+                if any(isinstance(n, ast.Call) and isinstance(n.func, ast.Name)
+                       and n.func.id == "run_figure" for n in ast.walk(tree)):
+                    raise RuntimeError(f"Notebook delegates its workflow instead of showing its steps: {path.name}")
+        if not defined_functions:
+            raise RuntimeError(f"Notebook contains no local functions: {path.name}")
     with (ROOT / "provenance/source_files.csv").open(encoding="utf-8", newline="") as f:
         modules = list(csv.DictReader(f))
     for row in modules:

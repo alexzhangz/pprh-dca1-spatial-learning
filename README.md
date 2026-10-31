@@ -72,7 +72,9 @@ python main.py --figure 4 --data-root /path/to/manuscript-source-data
 python main.py --figure all --data-root /path/to/manuscript-source-data --refit
 ```
 
-The same workflows are available in `demos/`. Run Jupyter from this directory. Set the environment variable `PPRH_DATA_DIR` to the separate source-data directory, or change `DATA_ROOT` in the notebook. Figure outputs are written under `outputs/` unless `--output-root` is supplied.
+The [notebook guide](demos/README.md) links to the expanded figure workflows. Each notebook shows local functions, source-data loading, analysis parameters, statistical fitting and separate panel-plotting cells. They do not delegate the figure to `run_figure()`. Shared numerical estimators remain in `src/`.
+
+Run Jupyter from this directory. Set `PPRH_DATA_DIR` to the separate source-data directory, or change `DATA_ROOT` in the notebook. Notebooks default to statistical refitting; set `REFIT_STATISTICS=False` to use frozen estimates. Notebook outputs go under `outputs/notebooks/` by default, or the directory specified by `PPRH_OUTPUT_DIR`. CLI outputs go under `outputs/` unless `--output-root` is supplied.
 
 Without `--refit`, the program renders the provided source data using frozen manuscript statistical estimates. With `--refit`, it refits the original manuscript models from the source tables before rendering. This option refits statistical models; it does not rerun the neural sampling, embeddings or decoder training. The corresponding original neural-computation functions and their aligned-data contracts are provided in `00_recompute_metrics.ipynb` and `src/`. Inputs and outputs are separate: original input data are never replaced by the figure workflows.
 

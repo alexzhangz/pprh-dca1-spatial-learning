@@ -7,3 +7,4 @@
 - Map historical figure numbers to current Figures 3-7 and S4-S8.
 - Retain source hashes, analysis parameters and statistical validation records.
 - Add an MIT licence, manuscript citation, a synthetic decoder example and GitHub Actions checks.
+- Expand all eight notebooks with local functions, explicit computation/statistics steps and separate panel plots; validate their execution and refitted estimates against the manuscript tables.

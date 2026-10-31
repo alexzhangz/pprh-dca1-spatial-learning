@@ -1,0 +1,140 @@
+{
+  "validation_date": "2026-10-31",
+  "style": "explicit notebook analysis steps and panel plots",
+  "all_notebooks_executed": true,
+  "notebooks": [
+    {
+      "notebook": "00_recompute_metrics.ipynb",
+      "passed": true,
+      "executed_code_cells": 13,
+      "elapsed_seconds": 3.36,
+      "raw_neural_opt_ins_enabled": false
+    },
+    {
+      "notebook": "figure_3.ipynb",
+      "passed": true,
+      "executed_code_cells": 22,
+      "elapsed_seconds": 3.84,
+      "raw_neural_opt_ins_enabled": null
+    },
+    {
+      "notebook": "figure_4.ipynb",
+      "passed": true,
+      "executed_code_cells": 50,
+      "elapsed_seconds": 8.55,
+      "raw_neural_opt_ins_enabled": null
+    },
+    {
+      "notebook": "figure_5.ipynb",
+      "passed": true,
+      "executed_code_cells": 42,
+      "elapsed_seconds": 83.66,
+      "raw_neural_opt_ins_enabled": null
+    },
+    {
+      "notebook": "figure_6.ipynb",
+      "passed": true,
+      "executed_code_cells": 37,
+      "elapsed_seconds": 79.66,
+      "raw_neural_opt_ins_enabled": null
+    },
+    {
+      "notebook": "figure_7.ipynb",
+      "passed": true,
+      "executed_code_cells": 46,
+      "elapsed_seconds": 6.36,
+      "raw_neural_opt_ins_enabled": null
+    },
+    {
+      "notebook": "figure_S4.ipynb",
+      "passed": true,
+      "executed_code_cells": 8,
+      "elapsed_seconds": 3.78,
+      "raw_neural_opt_ins_enabled": null
+    },
+    {
+      "notebook": "figure_S7.ipynb",
+      "passed": true,
+      "executed_code_cells": 8,
+      "elapsed_seconds": 3.7,
+      "raw_neural_opt_ins_enabled": null
+    }
+  ],
+  "structure": [
+    {
+      "notebook": "00_recompute_metrics.ipynb",
+      "code_cells": 13,
+      "local_functions": 7,
+      "panel_cells": 0
+    },
+    {
+      "notebook": "figure_3.ipynb",
+      "code_cells": 22,
+      "local_functions": 3,
+      "panel_cells": 3
+    },
+    {
+      "notebook": "figure_4.ipynb",
+      "code_cells": 50,
+      "local_functions": 2,
+      "panel_cells": 15
+    },
+    {
+      "notebook": "figure_5.ipynb",
+      "code_cells": 42,
+      "local_functions": 2,
+      "panel_cells": 10
+    },
+    {
+      "notebook": "figure_6.ipynb",
+      "code_cells": 37,
+      "local_functions": 4,
+      "panel_cells": 14
+    },
+    {
+      "notebook": "figure_7.ipynb",
+      "code_cells": 46,
+      "local_functions": 1,
+      "panel_cells": 14
+    },
+    {
+      "notebook": "figure_S4.ipynb",
+      "code_cells": 8,
+      "local_functions": 1,
+      "panel_cells": 2
+    },
+    {
+      "notebook": "figure_S7.ipynb",
+      "code_cells": 8,
+      "local_functions": 1,
+      "panel_cells": 2
+    }
+  ],
+  "statistics_refitted": true,
+  "png_exports": 60,
+  "validation_export_settings": {
+    "formats": [
+      "png"
+    ],
+    "dpi": 100
+  },
+  "statistical_parity": {
+    "passed": true,
+    "contrasts": 882,
+    "relative_tolerance": 1e-06,
+    "absolute_tolerance": 1e-08,
+    "maximum_absolute_p_difference": 2.7102666388945096e-08
+  },
+  "decoder_notebook_function_check": {
+    "synthetic_session_check": "passed",
+    "trials": 10,
+    "neurons": 50,
+    "folds": 5,
+    "shift_controls": 100,
+    "manuscript_data": false,
+    "boundary": "Decoder notebook function only; no full-cohort raw neural run"
+  },
+  "scientific_unit_tests_passed": 13,
+  "raw_neural_computations": "All expensive raw-input switches remained disabled in the eight-notebook execution. The synthetic decoder check is separate.",
+  "publication_files": "Clean notebook outputs and empty execution counts; executed copies are kept outside the upload directory."
+}

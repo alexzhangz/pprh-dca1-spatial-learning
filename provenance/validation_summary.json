@@ -40,8 +40,20 @@
       "figure_S7.ipynb"
     ],
     "syntax_passed": true,
-    "executed_notebook": "figure_3.ipynb",
-    "mode": "frozen-statistics smoke; statistical refits tested independently"
+    "executed_notebooks": [
+      "00_recompute_metrics.ipynb",
+      "figure_3.ipynb",
+      "figure_4.ipynb",
+      "figure_5.ipynb",
+      "figure_6.ipynb",
+      "figure_7.ipynb",
+      "figure_S4.ipynb",
+      "figure_S7.ipynb"
+    ],
+    "all_executed": true,
+    "statistics_refitted": true,
+    "record": "provenance/notebook_execution.json",
+    "raw_neural_opt_ins": "disabled; imports and function definitions executed"
   },
   "statistical_refits": {
     "passed": true,
@@ -116,7 +128,7 @@
         "analysis": "Fig3e_GEE",
         "column": "p_value",
         "n_contrasts": 6,
-        "max_abs_error": 3.885780586188048e-16,
+        "max_abs_error": 5.967448757360216e-16,
         "passed": true
       },
       {
@@ -319,5 +331,12 @@
     "pinned_versions_match_current_environment": true,
     "github_actions_status": "Configured for Ubuntu and Windows; not run remotely before upload",
     "fresh_pypi_installation": "not verified: current-machine PyPI HTTPS connection was reset"
+  },
+  "expanded_notebook_validation": {
+    "passed": true,
+    "contrasts": 882,
+    "relative_tolerance": 1e-06,
+    "absolute_tolerance": 1e-08,
+    "maximum_absolute_p_difference": 2.7102666388945096e-08
   }
 }
